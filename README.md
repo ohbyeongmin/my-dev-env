@@ -6,3 +6,6 @@ This is my dev Environments including terminal, nvim, etc...
 
 [wezterm config](./WEZTERM.md)
 
+## Nvim
+
+[nvim config](./NVIM.md)
