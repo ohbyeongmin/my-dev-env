@@ -38,3 +38,6 @@ alias cd="z"
 
 # ---- LANG ----
 export LANG=en_US.UTF-8
+
+# ---- scripts ----
+export PATH=$HOME/.scripts:$PATH
