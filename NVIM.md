@@ -2,7 +2,7 @@
 
 [NvChad](https://nvchad.com/)
 
-### Rust
+## Rust
 
 **LSP**
 
@@ -36,7 +36,7 @@
 
 [crates.nvim](https://github.com/saecki/crates.nvim)
 
-### Golang
+## Golang
 
 **LSP**
 
