@@ -42,3 +42,22 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 
 -- rustaceanvim
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
+-- golang
+map("n", "<leader>dus", function ()
+  local widgets = require('dap.ui.widgets');
+  local sidebar = widgets.sidebar(widgets.scopes);
+  sidebar.open();
+end, { desc = "Open debugging sidebar"})
+
+map("n", "<leader>dgt", function ()
+  require('dap-go').debug_test()
+end, { desc = "Debug go test"})
+
+map("n", "<leader>dgl", function ()
+  require('dap-go').debug_last()
+end, { desc = "Debug last go test"})
+
+map("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>", { desc = "Add json struct tags"})
+
+map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>", { desc = "Add yaml struct tags"})

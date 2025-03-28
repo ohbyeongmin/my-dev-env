@@ -33,7 +33,6 @@ alias llt="ls -al -s time"
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
-
 alias cd="z"
 
 # ---- LANG ----
@@ -44,3 +43,5 @@ export PATH=$HOME/.scripts:$PATH
 
 # ---- nvim ----
 alias vi="nvim"
+
+PATH="$HOME/go/bin:$PATH"

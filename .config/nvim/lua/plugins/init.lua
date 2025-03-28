@@ -13,6 +13,7 @@ return {
     end,
   },
 
+  -- Plugin for rust-analyzer
   {
     'mrcjkb/rustaceanvim',
     version = '^5', -- Recommended
@@ -36,6 +37,7 @@ return {
     end
   },
 
+  -- Debug adpater protocol
   {
     'mfussenegger/nvim-dap',
     config = function()
@@ -63,6 +65,8 @@ return {
 		end,
   },
 
+
+  -- Auto formatting for rust
   {
     'rust-lang/rust.vim',
     ft = "rust",
@@ -71,6 +75,7 @@ return {
     end
   },
 
+  -- Crate version completions
   {
     'saecki/crates.nvim',
     ft = {"toml"},
@@ -86,6 +91,37 @@ return {
         sources = { { name = "crates" }}
       })
     end
+  },
+
+  -- Formatting golang
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = "go",
+    opts = function ()
+      return require "configs.null-ls"
+    end,
+  },
+
+  -- Debug protocol for golang
+  {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function(_, opts)
+      require("dap-go").setup(opts)
+    end
+  },
+
+  -- iferr completions & struct tags for golang
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd.GoInstallDeps()
+    end,
   },
 
   -- {
